@@ -1,0 +1,3 @@
+[submodule "VideoSuiteUtilities"]
+	path = VideoSuiteUtilities
+	url = git@github.com:HalfdanJ/VideoSuiteUtilities.git

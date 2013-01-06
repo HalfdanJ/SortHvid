@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SH' target in the 'SH' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
