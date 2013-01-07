@@ -8,8 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "VideoBank.h"
+#import "VideoPlayerView.h"
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+
+@property VideoBank * videoBank;
+@property (weak) IBOutlet VideoPlayerView *previewView;
 
 @end

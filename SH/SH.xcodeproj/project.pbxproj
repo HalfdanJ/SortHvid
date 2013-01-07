@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD0B71EA169AC57C0081762E /* VideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B71E9169AC57C0081762E /* VideoPlayerView.m */; };
+		DD0B71ED169AC60E0081762E /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B71EC169AC60E0081762E /* Quartz.framework */; };
+		DD0B71F1169AD46B0081762E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B71F0169AD46B0081762E /* CoreMedia.framework */; };
 		DD1A2DE11699E572001B4423 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1A2DE01699E572001B4423 /* Cocoa.framework */; };
 		DD1A2DEB1699E572001B4423 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD1A2DE91699E572001B4423 /* InfoPlist.strings */; };
 		DD1A2DED1699E572001B4423 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1A2DEC1699E572001B4423 /* main.m */; };
 		DD1A2DF11699E572001B4423 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DD1A2DEF1699E572001B4423 /* Credits.rtf */; };
 		DD1A2DF41699E572001B4423 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1A2DF31699E572001B4423 /* AppDelegate.m */; };
 		DD1A2DF71699E572001B4423 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1A2DF51699E572001B4423 /* MainMenu.xib */; };
+		DD1A2DFF1699E651001B4423 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DD1A2DFE1699E651001B4423 /* README.md */; };
+		DD1A2E061699EC50001B4423 /* VideoBank.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1A2E051699EC50001B4423 /* VideoBank.m */; };
+		DD1A2E09169A0808001B4423 /* VideoBankItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1A2E08169A0808001B4423 /* VideoBankItem.m */; };
+		DD1A2E0B169A2131001B4423 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1A2E0A169A2131001B4423 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD0B71E8169AC57C0081762E /* VideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerView.h; sourceTree = "<group>"; };
+		DD0B71E9169AC57C0081762E /* VideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerView.m; sourceTree = "<group>"; };
+		DD0B71EC169AC60E0081762E /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		DD0B71EF169AC8500081762E /* NSString+Timecode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Timecode.h"; sourceTree = "<group>"; };
+		DD0B71F0169AD46B0081762E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		DD1A2DDC1699E572001B4423 /* SH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1A2DE01699E572001B4423 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD1A2DE31699E572001B4423 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -29,6 +41,12 @@
 		DD1A2DF21699E572001B4423 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DD1A2DF31699E572001B4423 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DD1A2DF61699E572001B4423 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DD1A2DFE1699E651001B4423 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		DD1A2E041699EC50001B4423 /* VideoBank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoBank.h; sourceTree = "<group>"; };
+		DD1A2E051699EC50001B4423 /* VideoBank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoBank.m; sourceTree = "<group>"; };
+		DD1A2E07169A0808001B4423 /* VideoBankItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoBankItem.h; sourceTree = "<group>"; };
+		DD1A2E08169A0808001B4423 /* VideoBankItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoBankItem.m; sourceTree = "<group>"; };
+		DD1A2E0A169A2131001B4423 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0B71F1169AD46B0081762E /* CoreMedia.framework in Frameworks */,
+				DD0B71ED169AC60E0081762E /* Quartz.framework in Frameworks */,
+				DD1A2E0B169A2131001B4423 /* AVFoundation.framework in Frameworks */,
 				DD1A2DE11699E572001B4423 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +67,9 @@
 		DD1A2DD11699E572001B4423 = {
 			isa = PBXGroup;
 			children = (
+				DD0B71F0169AD46B0081762E /* CoreMedia.framework */,
+				DD0B71EC169AC60E0081762E /* Quartz.framework */,
+				DD1A2E0A169A2131001B4423 /* AVFoundation.framework */,
 				DD1A2DE61699E572001B4423 /* SH */,
 				DD1A2DDF1699E572001B4423 /* Frameworks */,
 				DD1A2DDD1699E572001B4423 /* Products */,
@@ -82,6 +106,7 @@
 		DD1A2DE61699E572001B4423 /* SH */ = {
 			isa = PBXGroup;
 			children = (
+				DD1A2DFD1699E651001B4423 /* VideoSuiteUtilities */,
 				DD1A2DF21699E572001B4423 /* AppDelegate.h */,
 				DD1A2DF31699E572001B4423 /* AppDelegate.m */,
 				DD1A2DF51699E572001B4423 /* MainMenu.xib */,
@@ -100,6 +125,22 @@
 				DD1A2DEF1699E572001B4423 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD1A2DFD1699E651001B4423 /* VideoSuiteUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				DD1A2DFE1699E651001B4423 /* README.md */,
+				DD1A2E041699EC50001B4423 /* VideoBank.h */,
+				DD1A2E051699EC50001B4423 /* VideoBank.m */,
+				DD1A2E07169A0808001B4423 /* VideoBankItem.h */,
+				DD1A2E08169A0808001B4423 /* VideoBankItem.m */,
+				DD0B71E8169AC57C0081762E /* VideoPlayerView.h */,
+				DD0B71E9169AC57C0081762E /* VideoPlayerView.m */,
+				DD0B71EF169AC8500081762E /* NSString+Timecode.h */,
+			);
+			name = VideoSuiteUtilities;
+			path = ../../VideoSuiteUtilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +197,7 @@
 				DD1A2DEB1699E572001B4423 /* InfoPlist.strings in Resources */,
 				DD1A2DF11699E572001B4423 /* Credits.rtf in Resources */,
 				DD1A2DF71699E572001B4423 /* MainMenu.xib in Resources */,
+				DD1A2DFF1699E651001B4423 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +210,9 @@
 			files = (
 				DD1A2DED1699E572001B4423 /* main.m in Sources */,
 				DD1A2DF41699E572001B4423 /* AppDelegate.m in Sources */,
+				DD1A2E061699EC50001B4423 /* VideoBank.m in Sources */,
+				DD1A2E09169A0808001B4423 /* VideoBankItem.m in Sources */,
+				DD0B71EA169AC57C0081762E /* VideoPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +342,7 @@
 				DD1A2DFC1699E572001B4423 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

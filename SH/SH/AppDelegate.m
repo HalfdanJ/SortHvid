@@ -12,7 +12,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    self.videoBank = [[VideoBank alloc] initWithNumberBanks:2];
+    self.videoBank.videoPreviewView = self.previewView;
 }
 
 @end
