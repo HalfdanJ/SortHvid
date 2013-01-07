@@ -12,8 +12,17 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    self.videoBank = [[VideoBank alloc] initWithNumberBanks:2];
+    self.videoBank = [[VideoBank alloc] initWithNumberBanks:3];
     self.videoBank.videoPreviewView = self.previewView;
+    
+    [self.outputWindow orderFront:self];
+    
+    self.videoBankPlayer = [[VideoBankPlayer alloc] init];
+    self.videoBankPlayer.videoBank = self.videoBank;
+    
+    self.videoBankPlayer.layer.frame = self.outputWindow.imageViewer.layer.frame;
+    [self.outputWindow.imageViewer.layer addSublayer:self.videoBankPlayer.layer];
+    
 }
 
 @end

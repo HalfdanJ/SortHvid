@@ -10,6 +10,9 @@
 		DD0B71EA169AC57C0081762E /* VideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B71E9169AC57C0081762E /* VideoPlayerView.m */; };
 		DD0B71ED169AC60E0081762E /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B71EC169AC60E0081762E /* Quartz.framework */; };
 		DD0B71F1169AD46B0081762E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B71F0169AD46B0081762E /* CoreMedia.framework */; };
+		DD0B71F4169AE73A0081762E /* CoreImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B71F3169AE73A0081762E /* CoreImageViewer.m */; };
+		DD0B71F7169AE7B80081762E /* OutputWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B71F6169AE7B70081762E /* OutputWindow.m */; };
+		DD0B71FA169AED850081762E /* VideoBankPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B71F9169AED850081762E /* VideoBankPlayer.m */; };
 		DD1A2DE11699E572001B4423 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1A2DE01699E572001B4423 /* Cocoa.framework */; };
 		DD1A2DEB1699E572001B4423 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD1A2DE91699E572001B4423 /* InfoPlist.strings */; };
 		DD1A2DED1699E572001B4423 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1A2DEC1699E572001B4423 /* main.m */; };
@@ -28,6 +31,12 @@
 		DD0B71EC169AC60E0081762E /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		DD0B71EF169AC8500081762E /* NSString+Timecode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Timecode.h"; sourceTree = "<group>"; };
 		DD0B71F0169AD46B0081762E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		DD0B71F2169AE73A0081762E /* CoreImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreImageViewer.h; sourceTree = "<group>"; };
+		DD0B71F3169AE73A0081762E /* CoreImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreImageViewer.m; sourceTree = "<group>"; };
+		DD0B71F5169AE7B70081762E /* OutputWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputWindow.h; sourceTree = "<group>"; };
+		DD0B71F6169AE7B70081762E /* OutputWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputWindow.m; sourceTree = "<group>"; };
+		DD0B71F8169AED850081762E /* VideoBankPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoBankPlayer.h; sourceTree = "<group>"; };
+		DD0B71F9169AED850081762E /* VideoBankPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoBankPlayer.m; sourceTree = "<group>"; };
 		DD1A2DDC1699E572001B4423 /* SH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1A2DE01699E572001B4423 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD1A2DE31699E572001B4423 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -133,10 +142,16 @@
 				DD1A2DFE1699E651001B4423 /* README.md */,
 				DD1A2E041699EC50001B4423 /* VideoBank.h */,
 				DD1A2E051699EC50001B4423 /* VideoBank.m */,
+				DD0B71F8169AED850081762E /* VideoBankPlayer.h */,
+				DD0B71F9169AED850081762E /* VideoBankPlayer.m */,
 				DD1A2E07169A0808001B4423 /* VideoBankItem.h */,
 				DD1A2E08169A0808001B4423 /* VideoBankItem.m */,
 				DD0B71E8169AC57C0081762E /* VideoPlayerView.h */,
 				DD0B71E9169AC57C0081762E /* VideoPlayerView.m */,
+				DD0B71F2169AE73A0081762E /* CoreImageViewer.h */,
+				DD0B71F3169AE73A0081762E /* CoreImageViewer.m */,
+				DD0B71F5169AE7B70081762E /* OutputWindow.h */,
+				DD0B71F6169AE7B70081762E /* OutputWindow.m */,
 				DD0B71EF169AC8500081762E /* NSString+Timecode.h */,
 			);
 			name = VideoSuiteUtilities;
@@ -213,6 +228,9 @@
 				DD1A2E061699EC50001B4423 /* VideoBank.m in Sources */,
 				DD1A2E09169A0808001B4423 /* VideoBankItem.m in Sources */,
 				DD0B71EA169AC57C0081762E /* VideoPlayerView.m in Sources */,
+				DD0B71F4169AE73A0081762E /* CoreImageViewer.m in Sources */,
+				DD0B71F7169AE7B80081762E /* OutputWindow.m in Sources */,
+				DD0B71FA169AED850081762E /* VideoBankPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
