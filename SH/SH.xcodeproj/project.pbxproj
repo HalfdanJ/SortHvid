@@ -23,6 +23,7 @@
 		DD1A2E061699EC50001B4423 /* VideoBank.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1A2E051699EC50001B4423 /* VideoBank.m */; };
 		DD1A2E09169A0808001B4423 /* VideoBankItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1A2E08169A0808001B4423 /* VideoBankItem.m */; };
 		DD1A2E0B169A2131001B4423 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1A2E0A169A2131001B4423 /* AVFoundation.framework */; };
+		DDEB04CB169B39AC009FBF86 /* BankTableViewCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEB04CA169B39AC009FBF86 /* BankTableViewCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		DD1A2E07169A0808001B4423 /* VideoBankItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoBankItem.h; sourceTree = "<group>"; };
 		DD1A2E08169A0808001B4423 /* VideoBankItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoBankItem.m; sourceTree = "<group>"; };
 		DD1A2E0A169A2131001B4423 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DDEB04C9169B39AC009FBF86 /* BankTableViewCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankTableViewCellView.h; sourceTree = "<group>"; };
+		DDEB04CA169B39AC009FBF86 /* BankTableViewCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankTableViewCellView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				DD0B71F3169AE73A0081762E /* CoreImageViewer.m */,
 				DD0B71F5169AE7B70081762E /* OutputWindow.h */,
 				DD0B71F6169AE7B70081762E /* OutputWindow.m */,
+				DDEB04C9169B39AC009FBF86 /* BankTableViewCellView.h */,
+				DDEB04CA169B39AC009FBF86 /* BankTableViewCellView.m */,
 				DD0B71EF169AC8500081762E /* NSString+Timecode.h */,
 			);
 			name = VideoSuiteUtilities;
@@ -231,6 +236,7 @@
 				DD0B71F4169AE73A0081762E /* CoreImageViewer.m in Sources */,
 				DD0B71F7169AE7B80081762E /* OutputWindow.m in Sources */,
 				DD0B71FA169AED850081762E /* VideoBankPlayer.m in Sources */,
+				DDEB04CB169B39AC009FBF86 /* BankTableViewCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
