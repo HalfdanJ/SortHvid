@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D23F318169E128D00FE6639 /* SH.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0D23F317169E128D00FE6639 /* SH.icns */; };
 		DD0B71EA169AC57C0081762E /* VideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B71E9169AC57C0081762E /* VideoPlayerView.m */; };
 		DD0B71ED169AC60E0081762E /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B71EC169AC60E0081762E /* Quartz.framework */; };
 		DD0B71F1169AD46B0081762E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B71F0169AD46B0081762E /* CoreMedia.framework */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D23F317169E128D00FE6639 /* SH.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = SH.icns; path = ../../SH.icns; sourceTree = "<group>"; };
 		DD0B71E8169AC57C0081762E /* VideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerView.h; sourceTree = "<group>"; };
 		DD0B71E9169AC57C0081762E /* VideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerView.m; sourceTree = "<group>"; };
 		DD0B71EC169AC60E0081762E /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -130,6 +132,7 @@
 		DD1A2DE71699E572001B4423 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0D23F317169E128D00FE6639 /* SH.icns */,
 				DD1A2DE81699E572001B4423 /* SH-Info.plist */,
 				DD1A2DE91699E572001B4423 /* InfoPlist.strings */,
 				DD1A2DEC1699E572001B4423 /* main.m */,
@@ -218,6 +221,7 @@
 				DD1A2DF11699E572001B4423 /* Credits.rtf in Resources */,
 				DD1A2DF71699E572001B4423 /* MainMenu.xib in Resources */,
 				DD1A2DFF1699E651001B4423 /* README.md in Resources */,
+				0D23F318169E128D00FE6639 /* SH.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
