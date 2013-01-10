@@ -10,8 +10,13 @@
 
 #import "VideoBank.h"
 #import "VideoBankPlayer.h"
+#import "VideoBankRecorder.h"
+
 #import "VideoPlayerView.h"
+
 #import "OutputWindow.h"
+
+#import "BlackMagicController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -19,9 +24,12 @@
 
 @property VideoBank * videoBank;
 @property VideoBankPlayer * videoBankPlayer;
+@property VideoBankRecorder * videoBankRecorder;
+@property BlackMagicController * blackMagicController;
 
 @property (weak) IBOutlet OutputWindow * outputWindow;
 
 @property (weak) IBOutlet VideoPlayerView *previewView;
+@property (weak) IBOutlet CoreImageViewer *livePreview1;
 
 @end

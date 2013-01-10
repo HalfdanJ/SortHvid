@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0D23F318169E128D00FE6639 /* SH.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0D23F317169E128D00FE6639 /* SH.icns */; };
+		0D23F321169E1C0600FE6639 /* DecklinkCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D23F320169E1C0600FE6639 /* DecklinkCallback.mm */; };
+		0DA1EB76169ED61700F88FF1 /* BlackMagicItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1EB75169ED61700F88FF1 /* BlackMagicItem.mm */; };
+		0DA1EB78169EDA6500F88FF1 /* BlackMagicController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D23F325169E1C1D00FE6639 /* BlackMagicController.mm */; };
+		0DA1EB79169EDAD800F88FF1 /* DeckLinkAPIDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D23F323169E1C1000FE6639 /* DeckLinkAPIDispatch.cpp */; };
+		0DA1EB7C169EE33D00F88FF1 /* BeamSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1EB7B169EE33D00F88FF1 /* BeamSync.m */; };
+		0DA1EB7F169EE76100F88FF1 /* VideoBankRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1EB7E169EE76100F88FF1 /* VideoBankRecorder.mm */; };
 		DD0B71EA169AC57C0081762E /* VideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B71E9169AC57C0081762E /* VideoPlayerView.m */; };
 		DD0B71ED169AC60E0081762E /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B71EC169AC60E0081762E /* Quartz.framework */; };
 		DD0B71F1169AD46B0081762E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B71F0169AD46B0081762E /* CoreMedia.framework */; };
@@ -18,7 +24,7 @@
 		DD1A2DEB1699E572001B4423 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD1A2DE91699E572001B4423 /* InfoPlist.strings */; };
 		DD1A2DED1699E572001B4423 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1A2DEC1699E572001B4423 /* main.m */; };
 		DD1A2DF11699E572001B4423 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DD1A2DEF1699E572001B4423 /* Credits.rtf */; };
-		DD1A2DF41699E572001B4423 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1A2DF31699E572001B4423 /* AppDelegate.m */; };
+		DD1A2DF41699E572001B4423 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD1A2DF31699E572001B4423 /* AppDelegate.mm */; };
 		DD1A2DF71699E572001B4423 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1A2DF51699E572001B4423 /* MainMenu.xib */; };
 		DD1A2DFF1699E651001B4423 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DD1A2DFE1699E651001B4423 /* README.md */; };
 		DD1A2E061699EC50001B4423 /* VideoBank.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1A2E051699EC50001B4423 /* VideoBank.m */; };
@@ -29,6 +35,18 @@
 
 /* Begin PBXFileReference section */
 		0D23F317169E128D00FE6639 /* SH.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = SH.icns; path = ../../SH.icns; sourceTree = "<group>"; };
+		0D23F31F169E1C0100FE6639 /* DecklinkCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecklinkCallback.h; sourceTree = "<group>"; };
+		0D23F320169E1C0600FE6639 /* DecklinkCallback.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DecklinkCallback.mm; sourceTree = "<group>"; };
+		0D23F322169E1C1000FE6639 /* DeckLinkAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPI.h; sourceTree = "<group>"; };
+		0D23F323169E1C1000FE6639 /* DeckLinkAPIDispatch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeckLinkAPIDispatch.cpp; sourceTree = "<group>"; };
+		0D23F324169E1C1D00FE6639 /* BlackMagicController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackMagicController.h; sourceTree = "<group>"; };
+		0D23F325169E1C1D00FE6639 /* BlackMagicController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BlackMagicController.mm; sourceTree = "<group>"; };
+		0DA1EB74169ED61700F88FF1 /* BlackMagicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackMagicItem.h; sourceTree = "<group>"; };
+		0DA1EB75169ED61700F88FF1 /* BlackMagicItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlackMagicItem.mm; sourceTree = "<group>"; };
+		0DA1EB7A169EE33D00F88FF1 /* BeamSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeamSync.h; sourceTree = "<group>"; };
+		0DA1EB7B169EE33D00F88FF1 /* BeamSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeamSync.m; sourceTree = "<group>"; };
+		0DA1EB7D169EE76100F88FF1 /* VideoBankRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoBankRecorder.h; sourceTree = "<group>"; };
+		0DA1EB7E169EE76100F88FF1 /* VideoBankRecorder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoBankRecorder.mm; sourceTree = "<group>"; };
 		DD0B71E8169AC57C0081762E /* VideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerView.h; sourceTree = "<group>"; };
 		DD0B71E9169AC57C0081762E /* VideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerView.m; sourceTree = "<group>"; };
 		DD0B71EC169AC60E0081762E /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -51,7 +69,7 @@
 		DD1A2DEE1699E572001B4423 /* SH-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SH-Prefix.pch"; sourceTree = "<group>"; };
 		DD1A2DF01699E572001B4423 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		DD1A2DF21699E572001B4423 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DD1A2DF31699E572001B4423 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DD1A2DF31699E572001B4423 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		DD1A2DF61699E572001B4423 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		DD1A2DFE1699E651001B4423 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		DD1A2E041699EC50001B4423 /* VideoBank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoBank.h; sourceTree = "<group>"; };
@@ -78,6 +96,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D23F31E169E1BA300FE6639 /* DeckLink */ = {
+			isa = PBXGroup;
+			children = (
+				0D23F324169E1C1D00FE6639 /* BlackMagicController.h */,
+				0D23F325169E1C1D00FE6639 /* BlackMagicController.mm */,
+				0DA1EB74169ED61700F88FF1 /* BlackMagicItem.h */,
+				0DA1EB75169ED61700F88FF1 /* BlackMagicItem.mm */,
+				0D23F31F169E1C0100FE6639 /* DecklinkCallback.h */,
+				0D23F320169E1C0600FE6639 /* DecklinkCallback.mm */,
+				0D23F322169E1C1000FE6639 /* DeckLinkAPI.h */,
+				0D23F323169E1C1000FE6639 /* DeckLinkAPIDispatch.cpp */,
+			);
+			path = DeckLink;
+			sourceTree = "<group>";
+		};
 		DD1A2DD11699E572001B4423 = {
 			isa = PBXGroup;
 			children = (
@@ -122,7 +155,7 @@
 			children = (
 				DD1A2DFD1699E651001B4423 /* VideoSuiteUtilities */,
 				DD1A2DF21699E572001B4423 /* AppDelegate.h */,
-				DD1A2DF31699E572001B4423 /* AppDelegate.m */,
+				DD1A2DF31699E572001B4423 /* AppDelegate.mm */,
 				DD1A2DF51699E572001B4423 /* MainMenu.xib */,
 				DD1A2DE71699E572001B4423 /* Supporting Files */,
 			);
@@ -145,6 +178,7 @@
 		DD1A2DFD1699E651001B4423 /* VideoSuiteUtilities */ = {
 			isa = PBXGroup;
 			children = (
+				0D23F31E169E1BA300FE6639 /* DeckLink */,
 				DD1A2DFE1699E651001B4423 /* README.md */,
 				DD1A2E041699EC50001B4423 /* VideoBank.h */,
 				DD1A2E051699EC50001B4423 /* VideoBank.m */,
@@ -154,6 +188,8 @@
 				DD1A2E08169A0808001B4423 /* VideoBankItem.m */,
 				DD0B71E8169AC57C0081762E /* VideoPlayerView.h */,
 				DD0B71E9169AC57C0081762E /* VideoPlayerView.m */,
+				0DA1EB7D169EE76100F88FF1 /* VideoBankRecorder.h */,
+				0DA1EB7E169EE76100F88FF1 /* VideoBankRecorder.mm */,
 				DD0B71F2169AE73A0081762E /* CoreImageViewer.h */,
 				DD0B71F3169AE73A0081762E /* CoreImageViewer.m */,
 				DD0B71F5169AE7B70081762E /* OutputWindow.h */,
@@ -161,6 +197,8 @@
 				DDEB04C9169B39AC009FBF86 /* BankTableViewCellView.h */,
 				DDEB04CA169B39AC009FBF86 /* BankTableViewCellView.m */,
 				DD0B71EF169AC8500081762E /* NSString+Timecode.h */,
+				0DA1EB7A169EE33D00F88FF1 /* BeamSync.h */,
+				0DA1EB7B169EE33D00F88FF1 /* BeamSync.m */,
 			);
 			name = VideoSuiteUtilities;
 			path = ../../VideoSuiteUtilities;
@@ -233,7 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD1A2DED1699E572001B4423 /* main.m in Sources */,
-				DD1A2DF41699E572001B4423 /* AppDelegate.m in Sources */,
+				DD1A2DF41699E572001B4423 /* AppDelegate.mm in Sources */,
 				DD1A2E061699EC50001B4423 /* VideoBank.m in Sources */,
 				DD1A2E09169A0808001B4423 /* VideoBankItem.m in Sources */,
 				DD0B71EA169AC57C0081762E /* VideoPlayerView.m in Sources */,
@@ -241,6 +279,12 @@
 				DD0B71F7169AE7B80081762E /* OutputWindow.m in Sources */,
 				DD0B71FA169AED850081762E /* VideoBankPlayer.m in Sources */,
 				DDEB04CB169B39AC009FBF86 /* BankTableViewCellView.m in Sources */,
+				0DA1EB76169ED61700F88FF1 /* BlackMagicItem.mm in Sources */,
+				0DA1EB78169EDA6500F88FF1 /* BlackMagicController.mm in Sources */,
+				0D23F321169E1C0600FE6639 /* DecklinkCallback.mm in Sources */,
+				0DA1EB79169EDAD800F88FF1 /* DeckLinkAPIDispatch.cpp in Sources */,
+				0DA1EB7C169EE33D00F88FF1 /* BeamSync.m in Sources */,
+				0DA1EB7F169EE76100F88FF1 /* VideoBankRecorder.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +377,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SH/SH-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../VideoSuiteUtilities/libs/Blackmagic DeckLink SDK 9.6.4/Mac/include\"",
+				);
 				INFOPLIST_FILE = "SH/SH-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -345,6 +392,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SH/SH-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../VideoSuiteUtilities/libs/Blackmagic DeckLink SDK 9.6.4/Mac/include\"",
+				);
 				INFOPLIST_FILE = "SH/SH-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
