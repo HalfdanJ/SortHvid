@@ -13,6 +13,7 @@
 #import "VideoBankSimPlayer.h"
 #import "VideoBankRecorder.h"
 #import "LiveMixer.h"
+#import "Filters.h"
 #import "QLabController.h"
 #import "MIDIReceiver.h"
 
@@ -31,6 +32,7 @@
 @property VideoBankSimPlayer * videoBankSimPlayer;
 @property VideoBankRecorder * videoBankRecorder;
 @property LiveMixer * liveMixer;
+@property Filters * filters;
 @property BlackMagicController * blackMagicController;
 @property QLabController * qlab;
 @property MIDIReceiver * midiReceiver;

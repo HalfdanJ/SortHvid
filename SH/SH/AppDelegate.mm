@@ -18,6 +18,9 @@
     self.midiReceiver = [[MIDIReceiver alloc] init];
 
     self.blackMagicController = [[BlackMagicController alloc] initWithNumItems:3];
+    
+    self.filters = [[Filters alloc] init];
+    [self.outputWindow bind:@"filters" toObject:self.filters withKeyPath:@"filters" options:nil];
 
     
     self.videoBank = [[VideoBank alloc] initWithNumberBanks:50];
@@ -34,6 +37,7 @@
     
     self.videoBankSimPlayer.layer.frame = self.outputWindow.layer.frame;
     [self.outputWindow.layer addSublayer:self.videoBankSimPlayer.layer];
+
     
     self.liveMixer = [[LiveMixer alloc] init];
     [self.liveMixer bind:@"input1" toObject:[self.blackMagicController.items objectAtIndex:0] withKeyPath:@"inputImage" options:0];
@@ -41,7 +45,6 @@
     [self.liveMixer bind:@"input3" toObject:[self.blackMagicController.items objectAtIndex:2] withKeyPath:@"inputImage" options:0];
     
     [self.outputWindow.imageViewer bind:@"ciImage" toObject:self.liveMixer withKeyPath:@"output" options:0];
-
     
     self.qlab = [[QLabController alloc] init];
     
@@ -54,7 +57,6 @@
     self.livePreview1.delegate = self.liveMixer;
     self.livePreview1.customData = @(1);
     [self.livePreview1 bind:@"highlight" toObject:self.liveMixer withKeyPath:@"input1Selected" options:nil];
-   // self.livePreview1.highlight = YES;
     
     [self.livePreview2 bind:@"ciImage" toObject:[self.blackMagicController.items objectAtIndex:1] withKeyPath:@"inputImage" options:nil];
     self.livePreview2.delegate = self.liveMixer;
