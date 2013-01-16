@@ -17,6 +17,8 @@
     
     self.midiReceiver = [[MIDIReceiver alloc] init];
 
+    self.blackMagicController = [[BlackMagicController alloc] initWithNumItems:3];
+
     
     self.videoBank = [[VideoBank alloc] initWithNumberBanks:50];
     self.videoBank.videoPreviewView = self.previewView;
@@ -33,20 +35,36 @@
     self.videoBankSimPlayer.layer.frame = self.outputWindow.layer.frame;
     [self.outputWindow.layer addSublayer:self.videoBankSimPlayer.layer];
     
+    self.liveMixer = [[LiveMixer alloc] init];
+    [self.liveMixer bind:@"input1" toObject:[self.blackMagicController.items objectAtIndex:0] withKeyPath:@"inputImage" options:0];
+    [self.liveMixer bind:@"input2" toObject:[self.blackMagicController.items objectAtIndex:1] withKeyPath:@"inputImage" options:0];
+    [self.liveMixer bind:@"input3" toObject:[self.blackMagicController.items objectAtIndex:2] withKeyPath:@"inputImage" options:0];
+    
+    [self.outputWindow.imageViewer bind:@"ciImage" toObject:self.liveMixer withKeyPath:@"output" options:0];
+
+    
     self.qlab = [[QLabController alloc] init];
     
     
     ////------
     
-    self.blackMagicController = [[BlackMagicController alloc] initWithNumItems:3];
     
-    [self.outputWindow.imageViewer bind:@"ciImage" toObject:[self.blackMagicController.items objectAtIndex:0] withKeyPath:@"inputImage" options:0];
     
     [self.livePreview1 bind:@"ciImage" toObject:[self.blackMagicController.items objectAtIndex:0] withKeyPath:@"inputImage" options:nil];
+    self.livePreview1.delegate = self.liveMixer;
+    self.livePreview1.customData = @(1);
+    [self.livePreview1 bind:@"highlight" toObject:self.liveMixer withKeyPath:@"input1Selected" options:nil];
+   // self.livePreview1.highlight = YES;
     
     [self.livePreview2 bind:@"ciImage" toObject:[self.blackMagicController.items objectAtIndex:1] withKeyPath:@"inputImage" options:nil];
+    self.livePreview2.delegate = self.liveMixer;
+    self.livePreview2.customData = @(2);
+    [self.livePreview2 bind:@"highlight" toObject:self.liveMixer withKeyPath:@"input2Selected" options:nil];
     
     [self.livePreview3 bind:@"ciImage" toObject:[self.blackMagicController.items objectAtIndex:2] withKeyPath:@"inputImage" options:nil];
+    self.livePreview3.delegate = self.liveMixer;
+    self.livePreview3.customData = @(3);
+    [self.livePreview3 bind:@"highlight" toObject:self.liveMixer withKeyPath:@"input3Selected" options:nil];
     
     self.videoBankRecorder = [[VideoBankRecorder alloc] initWithBlackmagicItems:self.blackMagicController.items bank:self.videoBank];
     
