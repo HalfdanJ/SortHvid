@@ -10,7 +10,10 @@
 
 #import "VideoBank.h"
 #import "VideoBankPlayer.h"
+#import "VideoBankSimPlayer.h"
 #import "VideoBankRecorder.h"
+#import "QLabController.h"
+#import "MIDIReceiver.h"
 
 #import "VideoPlayerView.h"
 
@@ -24,12 +27,17 @@
 
 @property VideoBank * videoBank;
 @property VideoBankPlayer * videoBankPlayer;
+@property VideoBankSimPlayer * videoBankSimPlayer;
 @property VideoBankRecorder * videoBankRecorder;
 @property BlackMagicController * blackMagicController;
+@property QLabController * qlab;
+@property MIDIReceiver * midiReceiver;
 
 @property (weak) IBOutlet OutputWindow * outputWindow;
 
 @property (weak) IBOutlet VideoPlayerView *previewView;
 @property (weak) IBOutlet CoreImageViewer *livePreview1;
+@property (weak) IBOutlet CoreImageViewer *livePreview2;
+@property (weak) IBOutlet CoreImageViewer *livePreview3;
 
 @end

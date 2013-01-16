@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		0D23F318169E128D00FE6639 /* SH.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0D23F317169E128D00FE6639 /* SH.icns */; };
 		0D23F321169E1C0600FE6639 /* DecklinkCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D23F320169E1C0600FE6639 /* DecklinkCallback.mm */; };
+		0D2F904016A5B7FF006B4414 /* QLabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2F903F16A5B7FE006B4414 /* QLabController.m */; };
+		0D2F904316A5BF0B006B4414 /* qlab.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0D2F904216A5BF0B006B4414 /* qlab.icns */; };
 		0DA1EB76169ED61700F88FF1 /* BlackMagicItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1EB75169ED61700F88FF1 /* BlackMagicItem.mm */; };
 		0DA1EB78169EDA6500F88FF1 /* BlackMagicController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D23F325169E1C1D00FE6639 /* BlackMagicController.mm */; };
 		0DA1EB79169EDAD800F88FF1 /* DeckLinkAPIDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D23F323169E1C1000FE6639 /* DeckLinkAPIDispatch.cpp */; };
 		0DA1EB7C169EE33D00F88FF1 /* BeamSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1EB7B169EE33D00F88FF1 /* BeamSync.m */; };
 		0DA1EB7F169EE76100F88FF1 /* VideoBankRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1EB7E169EE76100F88FF1 /* VideoBankRecorder.mm */; };
+		0DC3B04416A06BE500F0FEF7 /* QlabDragger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC3B04316A06BE500F0FEF7 /* QlabDragger.m */; };
+		0DC3B04816A0707300F0FEF7 /* drag.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DC3B04716A0707300F0FEF7 /* drag.plist */; };
+		0DE6D50816A6EFD100A3616F /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE6D50716A6EFD100A3616F /* CoreMIDI.framework */; };
+		0DE6D50D16A6F23800A3616F /* MIDIReceiver.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D50C16A6F23800A3616F /* MIDIReceiver.mm */; };
+		0DED230E16A465EF002C438F /* VideoBankSimPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DED230D16A465EF002C438F /* VideoBankSimPlayer.m */; };
 		DD0B71EA169AC57C0081762E /* VideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B71E9169AC57C0081762E /* VideoPlayerView.m */; };
 		DD0B71ED169AC60E0081762E /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B71EC169AC60E0081762E /* Quartz.framework */; };
 		DD0B71F1169AD46B0081762E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B71F0169AD46B0081762E /* CoreMedia.framework */; };
@@ -41,12 +48,23 @@
 		0D23F323169E1C1000FE6639 /* DeckLinkAPIDispatch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeckLinkAPIDispatch.cpp; sourceTree = "<group>"; };
 		0D23F324169E1C1D00FE6639 /* BlackMagicController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackMagicController.h; sourceTree = "<group>"; };
 		0D23F325169E1C1D00FE6639 /* BlackMagicController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BlackMagicController.mm; sourceTree = "<group>"; };
+		0D2F903E16A5B7FE006B4414 /* QLabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLabController.h; sourceTree = "<group>"; };
+		0D2F903F16A5B7FE006B4414 /* QLabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLabController.m; sourceTree = "<group>"; };
+		0D2F904216A5BF0B006B4414 /* qlab.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = qlab.icns; sourceTree = "<group>"; };
 		0DA1EB74169ED61700F88FF1 /* BlackMagicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackMagicItem.h; sourceTree = "<group>"; };
 		0DA1EB75169ED61700F88FF1 /* BlackMagicItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlackMagicItem.mm; sourceTree = "<group>"; };
 		0DA1EB7A169EE33D00F88FF1 /* BeamSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeamSync.h; sourceTree = "<group>"; };
 		0DA1EB7B169EE33D00F88FF1 /* BeamSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeamSync.m; sourceTree = "<group>"; };
 		0DA1EB7D169EE76100F88FF1 /* VideoBankRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoBankRecorder.h; sourceTree = "<group>"; };
 		0DA1EB7E169EE76100F88FF1 /* VideoBankRecorder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoBankRecorder.mm; sourceTree = "<group>"; };
+		0DC3B04216A06BE500F0FEF7 /* QlabDragger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QlabDragger.h; sourceTree = "<group>"; };
+		0DC3B04316A06BE500F0FEF7 /* QlabDragger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QlabDragger.m; sourceTree = "<group>"; };
+		0DC3B04716A0707300F0FEF7 /* drag.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = drag.plist; sourceTree = "<group>"; };
+		0DE6D50716A6EFD100A3616F /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		0DE6D50B16A6F23800A3616F /* MIDIReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIReceiver.h; sourceTree = "<group>"; };
+		0DE6D50C16A6F23800A3616F /* MIDIReceiver.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MIDIReceiver.mm; sourceTree = "<group>"; };
+		0DED230C16A465EF002C438F /* VideoBankSimPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoBankSimPlayer.h; sourceTree = "<group>"; };
+		0DED230D16A465EF002C438F /* VideoBankSimPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoBankSimPlayer.m; sourceTree = "<group>"; };
 		DD0B71E8169AC57C0081762E /* VideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerView.h; sourceTree = "<group>"; };
 		DD0B71E9169AC57C0081762E /* VideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerView.m; sourceTree = "<group>"; };
 		DD0B71EC169AC60E0081762E /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -86,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE6D50816A6EFD100A3616F /* CoreMIDI.framework in Frameworks */,
 				DD0B71F1169AD46B0081762E /* CoreMedia.framework in Frameworks */,
 				DD0B71ED169AC60E0081762E /* Quartz.framework in Frameworks */,
 				DD1A2E0B169A2131001B4423 /* AVFoundation.framework in Frameworks */,
@@ -114,6 +133,8 @@
 		DD1A2DD11699E572001B4423 = {
 			isa = PBXGroup;
 			children = (
+				0DE6D50716A6EFD100A3616F /* CoreMIDI.framework */,
+				0D2F904216A5BF0B006B4414 /* qlab.icns */,
 				DD0B71F0169AD46B0081762E /* CoreMedia.framework */,
 				DD0B71EC169AC60E0081762E /* Quartz.framework */,
 				DD1A2E0A169A2131001B4423 /* AVFoundation.framework */,
@@ -157,6 +178,7 @@
 				DD1A2DF21699E572001B4423 /* AppDelegate.h */,
 				DD1A2DF31699E572001B4423 /* AppDelegate.mm */,
 				DD1A2DF51699E572001B4423 /* MainMenu.xib */,
+				0DC3B04716A0707300F0FEF7 /* drag.plist */,
 				DD1A2DE71699E572001B4423 /* Supporting Files */,
 			);
 			path = SH;
@@ -182,10 +204,12 @@
 				DD1A2DFE1699E651001B4423 /* README.md */,
 				DD1A2E041699EC50001B4423 /* VideoBank.h */,
 				DD1A2E051699EC50001B4423 /* VideoBank.m */,
-				DD0B71F8169AED850081762E /* VideoBankPlayer.h */,
-				DD0B71F9169AED850081762E /* VideoBankPlayer.m */,
 				DD1A2E07169A0808001B4423 /* VideoBankItem.h */,
 				DD1A2E08169A0808001B4423 /* VideoBankItem.m */,
+				DD0B71F8169AED850081762E /* VideoBankPlayer.h */,
+				DD0B71F9169AED850081762E /* VideoBankPlayer.m */,
+				0DED230C16A465EF002C438F /* VideoBankSimPlayer.h */,
+				0DED230D16A465EF002C438F /* VideoBankSimPlayer.m */,
 				DD0B71E8169AC57C0081762E /* VideoPlayerView.h */,
 				DD0B71E9169AC57C0081762E /* VideoPlayerView.m */,
 				0DA1EB7D169EE76100F88FF1 /* VideoBankRecorder.h */,
@@ -197,8 +221,14 @@
 				DDEB04C9169B39AC009FBF86 /* BankTableViewCellView.h */,
 				DDEB04CA169B39AC009FBF86 /* BankTableViewCellView.m */,
 				DD0B71EF169AC8500081762E /* NSString+Timecode.h */,
+				0DC3B04216A06BE500F0FEF7 /* QlabDragger.h */,
+				0DC3B04316A06BE500F0FEF7 /* QlabDragger.m */,
+				0DE6D50B16A6F23800A3616F /* MIDIReceiver.h */,
+				0DE6D50C16A6F23800A3616F /* MIDIReceiver.mm */,
 				0DA1EB7A169EE33D00F88FF1 /* BeamSync.h */,
 				0DA1EB7B169EE33D00F88FF1 /* BeamSync.m */,
+				0D2F903E16A5B7FE006B4414 /* QLabController.h */,
+				0D2F903F16A5B7FE006B4414 /* QLabController.m */,
 			);
 			name = VideoSuiteUtilities;
 			path = ../../VideoSuiteUtilities;
@@ -260,6 +290,8 @@
 				DD1A2DF71699E572001B4423 /* MainMenu.xib in Resources */,
 				DD1A2DFF1699E651001B4423 /* README.md in Resources */,
 				0D23F318169E128D00FE6639 /* SH.icns in Resources */,
+				0DC3B04816A0707300F0FEF7 /* drag.plist in Resources */,
+				0D2F904316A5BF0B006B4414 /* qlab.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +317,10 @@
 				0DA1EB79169EDAD800F88FF1 /* DeckLinkAPIDispatch.cpp in Sources */,
 				0DA1EB7C169EE33D00F88FF1 /* BeamSync.m in Sources */,
 				0DA1EB7F169EE76100F88FF1 /* VideoBankRecorder.mm in Sources */,
+				0DC3B04416A06BE500F0FEF7 /* QlabDragger.m in Sources */,
+				0DED230E16A465EF002C438F /* VideoBankSimPlayer.m in Sources */,
+				0D2F904016A5B7FF006B4414 /* QLabController.m in Sources */,
+				0DE6D50D16A6F23800A3616F /* MIDIReceiver.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
