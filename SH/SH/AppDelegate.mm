@@ -21,6 +21,8 @@
     
     self.filters = [[Filters alloc] init];
     [self.outputWindow bind:@"filters" toObject:self.filters withKeyPath:@"filters" options:nil];
+    
+    
 
     
     self.videoBank = [[VideoBank alloc] initWithNumberBanks:50];
@@ -45,6 +47,12 @@
     [self.liveMixer bind:@"input3" toObject:[self.blackMagicController.items objectAtIndex:2] withKeyPath:@"inputImage" options:0];
     
     [self.outputWindow.imageViewer bind:@"ciImage" toObject:self.liveMixer withKeyPath:@"output" options:0];
+    
+    self.masking = [[Masking alloc] init];
+    self.masking.maskingLayer.frame = self.outputWindow.layer.frame;
+    [self.outputWindow.layer addSublayer:self.masking.maskingLayer];
+
+    
     
     self.qlab = [[QLabController alloc] init];
     

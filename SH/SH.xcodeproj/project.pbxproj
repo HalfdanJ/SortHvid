@@ -20,6 +20,9 @@
 		0DA1EB7F169EE76100F88FF1 /* VideoBankRecorder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1EB7E169EE76100F88FF1 /* VideoBankRecorder.mm */; };
 		0DC3B04416A06BE500F0FEF7 /* QlabDragger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC3B04316A06BE500F0FEF7 /* QlabDragger.m */; };
 		0DC3B04816A0707300F0FEF7 /* drag.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DC3B04716A0707300F0FEF7 /* drag.plist */; };
+		0DD6A03816A8630700973395 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0DD6A03516A8630700973395 /* README.md */; };
+		0DD6A03A16A8634800973395 /* VDKQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD6A03716A8630700973395 /* VDKQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0DE21A3D16A82C830099CAB8 /* Masking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE21A3C16A82C830099CAB8 /* Masking.m */; };
 		0DE6D50816A6EFD100A3616F /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE6D50716A6EFD100A3616F /* CoreMIDI.framework */; };
 		0DE6D50D16A6F23800A3616F /* MIDIReceiver.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D50C16A6F23800A3616F /* MIDIReceiver.mm */; };
 		0DE6D51016A70A2600A3616F /* LiveMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D50F16A70A2600A3616F /* LiveMixer.m */; };
@@ -64,6 +67,11 @@
 		0DC3B04216A06BE500F0FEF7 /* QlabDragger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QlabDragger.h; sourceTree = "<group>"; };
 		0DC3B04316A06BE500F0FEF7 /* QlabDragger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QlabDragger.m; sourceTree = "<group>"; };
 		0DC3B04716A0707300F0FEF7 /* drag.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = drag.plist; sourceTree = "<group>"; };
+		0DD6A03516A8630700973395 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0DD6A03616A8630700973395 /* VDKQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDKQueue.h; sourceTree = "<group>"; };
+		0DD6A03716A8630700973395 /* VDKQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDKQueue.m; sourceTree = "<group>"; };
+		0DE21A3B16A82C830099CAB8 /* Masking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masking.h; sourceTree = "<group>"; };
+		0DE21A3C16A82C830099CAB8 /* Masking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Masking.m; sourceTree = "<group>"; };
 		0DE6D50716A6EFD100A3616F /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		0DE6D50B16A6F23800A3616F /* MIDIReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIReceiver.h; sourceTree = "<group>"; };
 		0DE6D50C16A6F23800A3616F /* MIDIReceiver.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MIDIReceiver.mm; sourceTree = "<group>"; };
@@ -141,6 +149,16 @@
 			path = DeckLink;
 			sourceTree = "<group>";
 		};
+		0DD6A03416A8630700973395 /* VDKQueue-master */ = {
+			isa = PBXGroup;
+			children = (
+				0DD6A03516A8630700973395 /* README.md */,
+				0DD6A03616A8630700973395 /* VDKQueue.h */,
+				0DD6A03716A8630700973395 /* VDKQueue.m */,
+			);
+			path = "VDKQueue-master";
+			sourceTree = "<group>";
+		};
 		DD1A2DD11699E572001B4423 = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +203,7 @@
 		DD1A2DE61699E572001B4423 /* SH */ = {
 			isa = PBXGroup;
 			children = (
+				0DD6A03416A8630700973395 /* VDKQueue-master */,
 				DD1A2DFD1699E651001B4423 /* VideoSuiteUtilities */,
 				DD1A2DF21699E572001B4423 /* AppDelegate.h */,
 				DD1A2DF31699E572001B4423 /* AppDelegate.mm */,
@@ -229,6 +248,8 @@
 				0DE6D50F16A70A2600A3616F /* LiveMixer.m */,
 				0DE6D51516A71AEA00A3616F /* Filters.h */,
 				0DE6D51616A71AEA00A3616F /* Filters.m */,
+				0DE21A3B16A82C830099CAB8 /* Masking.h */,
+				0DE21A3C16A82C830099CAB8 /* Masking.m */,
 				DD0B71F2169AE73A0081762E /* CoreImageViewer.h */,
 				DD0B71F3169AE73A0081762E /* CoreImageViewer.m */,
 				DD0B71F5169AE7B70081762E /* OutputWindow.h */,
@@ -311,6 +332,7 @@
 				0DC3B04816A0707300F0FEF7 /* drag.plist in Resources */,
 				0D2F904316A5BF0B006B4414 /* qlab.icns in Resources */,
 				0D79C73216A723460085ECC4 /* deinterlaceFilter.cikernel in Resources */,
+				0DD6A03816A8630700973395 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +365,8 @@
 				0DE6D51016A70A2600A3616F /* LiveMixer.m in Sources */,
 				0DE6D51716A71AEB00A3616F /* Filters.m in Sources */,
 				0D79C73016A723060085ECC4 /* DeinterlaceFilter.m in Sources */,
+				0DE21A3D16A82C830099CAB8 /* Masking.m in Sources */,
+				0DD6A03A16A8634800973395 /* VDKQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
