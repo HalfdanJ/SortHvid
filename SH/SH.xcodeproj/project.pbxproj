@@ -28,6 +28,7 @@
 		0DE6D51016A70A2600A3616F /* LiveMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D50F16A70A2600A3616F /* LiveMixer.m */; };
 		0DE6D51716A71AEB00A3616F /* Filters.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6D51616A71AEA00A3616F /* Filters.m */; };
 		0DED230E16A465EF002C438F /* VideoBankSimPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DED230D16A465EF002C438F /* VideoBankSimPlayer.m */; };
+		0DF893AE16A98F120026A2CE /* MyAvPlayerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF893AD16A98F120026A2CE /* MyAvPlayerLayer.m */; };
 		DD0B71EA169AC57C0081762E /* VideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B71E9169AC57C0081762E /* VideoPlayerView.m */; };
 		DD0B71ED169AC60E0081762E /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B71EC169AC60E0081762E /* Quartz.framework */; };
 		DD0B71F1169AD46B0081762E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0B71F0169AD46B0081762E /* CoreMedia.framework */; };
@@ -84,6 +85,8 @@
 		0DE6D51A16A7224900A3616F /* DeinterlaceFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeinterlaceFilter.m; sourceTree = "<group>"; };
 		0DED230C16A465EF002C438F /* VideoBankSimPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoBankSimPlayer.h; sourceTree = "<group>"; };
 		0DED230D16A465EF002C438F /* VideoBankSimPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoBankSimPlayer.m; sourceTree = "<group>"; };
+		0DF893AC16A98F110026A2CE /* MyAvPlayerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAvPlayerLayer.h; sourceTree = "<group>"; };
+		0DF893AD16A98F120026A2CE /* MyAvPlayerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAvPlayerLayer.m; sourceTree = "<group>"; };
 		DD0B71E8169AC57C0081762E /* VideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerView.h; sourceTree = "<group>"; };
 		DD0B71E9169AC57C0081762E /* VideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerView.m; sourceTree = "<group>"; };
 		DD0B71EC169AC60E0081762E /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -240,6 +243,8 @@
 				DD0B71F9169AED850081762E /* VideoBankPlayer.m */,
 				0DED230C16A465EF002C438F /* VideoBankSimPlayer.h */,
 				0DED230D16A465EF002C438F /* VideoBankSimPlayer.m */,
+				0DF893AC16A98F110026A2CE /* MyAvPlayerLayer.h */,
+				0DF893AD16A98F120026A2CE /* MyAvPlayerLayer.m */,
 				DD0B71E8169AC57C0081762E /* VideoPlayerView.h */,
 				DD0B71E9169AC57C0081762E /* VideoPlayerView.m */,
 				0DA1EB7D169EE76100F88FF1 /* VideoBankRecorder.h */,
@@ -367,6 +372,7 @@
 				0D79C73016A723060085ECC4 /* DeinterlaceFilter.m in Sources */,
 				0DE21A3D16A82C830099CAB8 /* Masking.m in Sources */,
 				0DD6A03A16A8634800973395 /* VDKQueue.m in Sources */,
+				0DF893AE16A98F120026A2CE /* MyAvPlayerLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +420,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",

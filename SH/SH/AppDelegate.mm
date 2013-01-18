@@ -22,6 +22,7 @@
     self.filters = [[Filters alloc] init];
     [self.outputWindow bind:@"filters" toObject:self.filters withKeyPath:@"filters" options:nil];
     
+    [self.filters addObserver:self.outputWindow forKeyPath:@"filters" options:0 context:nil];
     
 
     
@@ -60,23 +61,33 @@
     ////------
     
     
-    
+    self.videoBankRecorder = [[VideoBankRecorder alloc] initWithBlackmagicItems:self.blackMagicController.items bank:self.videoBank];
+
     [self.livePreview1 bind:@"ciImage" toObject:[self.blackMagicController.items objectAtIndex:0] withKeyPath:@"inputImage" options:nil];
     self.livePreview1.delegate = self.liveMixer;
     self.livePreview1.customData = @(1);
     [self.livePreview1 bind:@"highlight" toObject:self.liveMixer withKeyPath:@"input1Selected" options:nil];
-    
+    [self.livePreview1 bind:@"recordHighlight" toObject:self.videoBankRecorder withKeyPath:@"device1Selected" options:nil];
+
     [self.livePreview2 bind:@"ciImage" toObject:[self.blackMagicController.items objectAtIndex:1] withKeyPath:@"inputImage" options:nil];
     self.livePreview2.delegate = self.liveMixer;
     self.livePreview2.customData = @(2);
     [self.livePreview2 bind:@"highlight" toObject:self.liveMixer withKeyPath:@"input2Selected" options:nil];
+    [self.livePreview2 bind:@"recordHighlight" toObject:self.videoBankRecorder withKeyPath:@"device2Selected" options:nil];
     
+    CIFilter * filter = [CIFilter filterWithName:@"CIAffineTransform"];
+    NSAffineTransform * transform = [NSAffineTransform transform];
+    [transform scaleBy:720/1920.0];
+    [filter setValue:transform forKey:@"inputTransform"];
+    self.livePreview2.filters = @[filter];
+    
+
     [self.livePreview3 bind:@"ciImage" toObject:[self.blackMagicController.items objectAtIndex:2] withKeyPath:@"inputImage" options:nil];
     self.livePreview3.delegate = self.liveMixer;
     self.livePreview3.customData = @(3);
     [self.livePreview3 bind:@"highlight" toObject:self.liveMixer withKeyPath:@"input3Selected" options:nil];
-    
-    self.videoBankRecorder = [[VideoBankRecorder alloc] initWithBlackmagicItems:self.blackMagicController.items bank:self.videoBank];
+    [self.livePreview3 bind:@"recordHighlight" toObject:self.videoBankRecorder withKeyPath:@"device3Selected" options:nil];
+
     
     
     [self.window orderFront:self];
@@ -85,6 +96,7 @@
     
     
 }
+
 
 -(void)applicationWillTerminate:(NSNotification *)notification{
     [BeamSync enable];
