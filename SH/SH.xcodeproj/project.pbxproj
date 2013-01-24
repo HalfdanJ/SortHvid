@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D23F318169E128D00FE6639 /* SH.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0D23F317169E128D00FE6639 /* SH.icns */; };
+		088A007F16B17F92009F8091 /* MAVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088A007E16B17F92009F8091 /* MAVController.m */; };
 		0D23F321169E1C0600FE6639 /* DecklinkCallback.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D23F320169E1C0600FE6639 /* DecklinkCallback.mm */; };
 		0D2F904016A5B7FF006B4414 /* QLabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2F903F16A5B7FE006B4414 /* QLabController.m */; };
 		0D2F904316A5BF0B006B4414 /* qlab.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0D2F904216A5BF0B006B4414 /* qlab.icns */; };
@@ -49,7 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D23F317169E128D00FE6639 /* SH.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = SH.icns; path = ../../SH.icns; sourceTree = "<group>"; };
+		088A007D16B17F92009F8091 /* MAVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAVController.h; sourceTree = "<group>"; };
+		088A007E16B17F92009F8091 /* MAVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAVController.m; sourceTree = "<group>"; };
 		0D23F31F169E1C0100FE6639 /* DecklinkCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecklinkCallback.h; sourceTree = "<group>"; };
 		0D23F320169E1C0600FE6639 /* DecklinkCallback.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DecklinkCallback.mm; sourceTree = "<group>"; };
 		0D23F322169E1C1000FE6639 /* DeckLinkAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPI.h; sourceTree = "<group>"; };
@@ -98,7 +99,7 @@
 		DD0B71F6169AE7B70081762E /* OutputWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputWindow.m; sourceTree = "<group>"; };
 		DD0B71F8169AED850081762E /* VideoBankPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoBankPlayer.h; sourceTree = "<group>"; };
 		DD0B71F9169AED850081762E /* VideoBankPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoBankPlayer.m; sourceTree = "<group>"; };
-		DD1A2DDC1699E572001B4423 /* SH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SH.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD1A2DDC1699E572001B4423 /* Eksil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eksil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1A2DE01699E572001B4423 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD1A2DE31699E572001B4423 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		DD1A2DE41699E572001B4423 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -179,7 +180,7 @@
 		DD1A2DDD1699E572001B4423 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD1A2DDC1699E572001B4423 /* SH.app */,
+				DD1A2DDC1699E572001B4423 /* Eksil.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +212,8 @@
 				DD1A2DF21699E572001B4423 /* AppDelegate.h */,
 				DD1A2DF31699E572001B4423 /* AppDelegate.mm */,
 				DD1A2DF51699E572001B4423 /* MainMenu.xib */,
+				088A007D16B17F92009F8091 /* MAVController.h */,
+				088A007E16B17F92009F8091 /* MAVController.m */,
 				0DC3B04716A0707300F0FEF7 /* drag.plist */,
 				DD1A2DE71699E572001B4423 /* Supporting Files */,
 			);
@@ -220,7 +223,6 @@
 		DD1A2DE71699E572001B4423 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0D23F317169E128D00FE6639 /* SH.icns */,
 				DD1A2DE81699E572001B4423 /* SH-Info.plist */,
 				DD1A2DE91699E572001B4423 /* InfoPlist.strings */,
 				DD1A2DEC1699E572001B4423 /* main.m */,
@@ -295,7 +297,7 @@
 			);
 			name = SH;
 			productName = SH;
-			productReference = DD1A2DDC1699E572001B4423 /* SH.app */;
+			productReference = DD1A2DDC1699E572001B4423 /* Eksil.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -333,7 +335,6 @@
 				DD1A2DF11699E572001B4423 /* Credits.rtf in Resources */,
 				DD1A2DF71699E572001B4423 /* MainMenu.xib in Resources */,
 				DD1A2DFF1699E651001B4423 /* README.md in Resources */,
-				0D23F318169E128D00FE6639 /* SH.icns in Resources */,
 				0DC3B04816A0707300F0FEF7 /* drag.plist in Resources */,
 				0D2F904316A5BF0B006B4414 /* qlab.icns in Resources */,
 				0D79C73216A723460085ECC4 /* deinterlaceFilter.cikernel in Resources */,
@@ -373,6 +374,7 @@
 				0DE21A3D16A82C830099CAB8 /* Masking.m in Sources */,
 				0DD6A03A16A8634800973395 /* VDKQueue.m in Sources */,
 				0DF893AE16A98F120026A2CE /* MyAvPlayerLayer.m in Sources */,
+				088A007F16B17F92009F8091 /* MAVController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,7 +471,7 @@
 					"\"$(SRCROOT)/../VideoSuiteUtilities/libs/Blackmagic DeckLink SDK 9.6.4/Mac/include\"",
 				);
 				INFOPLIST_FILE = "SH/SH-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Eksil;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -484,7 +486,7 @@
 					"\"$(SRCROOT)/../VideoSuiteUtilities/libs/Blackmagic DeckLink SDK 9.6.4/Mac/include\"",
 				);
 				INFOPLIST_FILE = "SH/SH-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Eksil;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
