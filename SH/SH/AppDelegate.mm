@@ -17,7 +17,7 @@
     
     self.midiReceiver = [[MIDIReceiver alloc] init];
 
-    self.blackMagicController = [[BlackMagicController alloc] initWithNumItems:3];
+    self.blackMagicController = [[BlackMagicController alloc] initWithModes:@[@(2),@(2),@(2)]];
     
     self.filters = [[Filters alloc] init];
     [self.outputWindow bind:@"filters" toObject:self.filters withKeyPath:@"filters" options:nil];
@@ -31,27 +31,52 @@
     
     ////------
     self.videoBankPlayer = [[VideoBankPlayer alloc] initWithBank:self.videoBank];
+    self.videoBankPlayer.segmentControl = self.moviePlayerSegmentControl;
     
-    self.videoBankPlayer.layer.frame = self.outputWindow.layer.frame;
-    [self.outputWindow.layer addSublayer:self.videoBankPlayer.layer];
     
-    ////------
-    self.videoBankSimPlayer = [[VideoBankSimPlayer alloc] initWithBank:self.videoBank];
-    
-    self.videoBankSimPlayer.layer.frame = self.outputWindow.layer.frame;
-    [self.outputWindow.layer addSublayer:self.videoBankSimPlayer.layer];
+    self.videoBankPlayer.layer1.frame = self.outputWindow.layer1.frame;
+    [self.outputWindow.layer1 addSublayer:self.videoBankPlayer.layer1];
 
-    
-    self.liveMixer = [[LiveMixer alloc] init];
-    [self.liveMixer bind:@"input1" toObject:[self.blackMagicController.items objectAtIndex:0] withKeyPath:@"inputImage" options:0];
-    [self.liveMixer bind:@"input2" toObject:[self.blackMagicController.items objectAtIndex:1] withKeyPath:@"inputImage" options:0];
-    [self.liveMixer bind:@"input3" toObject:[self.blackMagicController.items objectAtIndex:2] withKeyPath:@"inputImage" options:0];
-    
-    [self.outputWindow.imageViewer bind:@"ciImage" toObject:self.liveMixer withKeyPath:@"output" options:0];
+    self.videoBankPlayer.layer2.frame = self.outputWindow.layer1.frame;
+    [self.outputWindow.layer2 addSublayer:self.videoBankPlayer.layer2];
+
+    self.videoBankPlayer.layer3.frame = self.outputWindow.layer1.frame;
+    [self.outputWindow.layer3 addSublayer:self.videoBankPlayer.layer3];
+
+    ////------
+
+    for(int i=0;i<3;i++){
+        LiveMixer * mixer;
+        mixer = [[LiveMixer alloc] init];
+        [mixer bind:@"input1" toObject:[self.blackMagicController.items objectAtIndex:0] withKeyPath:@"inputImage" options:0];
+        [mixer bind:@"input2" toObject:[self.blackMagicController.items objectAtIndex:1] withKeyPath:@"inputImage" options:0];
+        [mixer bind:@"input3" toObject:[self.blackMagicController.items objectAtIndex:2] withKeyPath:@"inputImage" options:0];
+        
+        if(i != 0){
+            [mixer bind:@"crossfade" toObject:self.liveMixer1 withKeyPath:@"crossfade" options:nil];
+            [mixer bind:@"opacity" toObject:self.liveMixer1 withKeyPath:@"opacity" options:nil];
+        }
+        
+
+        if(i==0)
+            self.liveMixer1 = mixer;
+        if(i==1)
+            self.liveMixer2 = mixer;
+        if(i==2)
+            self.liveMixer3 = mixer;
+        
+        
+        if(i==0)
+            [self.outputWindow.imageViewer1 bind:@"ciImage" toObject:self.liveMixer1 withKeyPath:@"output" options:0];
+        if(i==1)
+            [self.outputWindow.imageViewer2 bind:@"ciImage" toObject:self.liveMixer2 withKeyPath:@"output" options:0];
+        if(i==2)
+            [self.outputWindow.imageViewer3 bind:@"ciImage" toObject:self.liveMixer3 withKeyPath:@"output" options:0];
+    }
     
     self.masking = [[Masking alloc] init];
-    self.masking.maskingLayer.frame = self.outputWindow.layer.frame;
-    [self.outputWindow.layer addSublayer:self.masking.maskingLayer];
+    self.masking.maskingLayer.frame = self.outputWindow.layer1.frame;
+    [self.outputWindow.layer1 addSublayer:self.masking.maskingLayer];
 
     
     
@@ -64,35 +89,39 @@
     self.videoBankRecorder = [[VideoBankRecorder alloc] initWithBlackmagicItems:self.blackMagicController.items bank:self.videoBank];
 
     [self.livePreview1 bind:@"ciImage" toObject:[self.blackMagicController.items objectAtIndex:0] withKeyPath:@"inputImage" options:nil];
-    self.livePreview1.delegate = self.liveMixer;
-    self.livePreview1.customData = @(1);
-    [self.livePreview1 bind:@"highlight" toObject:self.liveMixer withKeyPath:@"input1Selected" options:nil];
-    [self.livePreview1 bind:@"recordHighlight" toObject:self.videoBankRecorder withKeyPath:@"device1Selected" options:nil];
 
     [self.livePreview2 bind:@"ciImage" toObject:[self.blackMagicController.items objectAtIndex:1] withKeyPath:@"inputImage" options:nil];
-    self.livePreview2.delegate = self.liveMixer;
-    self.livePreview2.customData = @(2);
-    [self.livePreview2 bind:@"highlight" toObject:self.liveMixer withKeyPath:@"input2Selected" options:nil];
-    [self.livePreview2 bind:@"recordHighlight" toObject:self.videoBankRecorder withKeyPath:@"device2Selected" options:nil];
     
-    CIFilter * filter = [CIFilter filterWithName:@"CIAffineTransform"];
+   /* CIFilter * filter = [CIFilter filterWithName:@"CIAffineTransform"];
     NSAffineTransform * transform = [NSAffineTransform transform];
     [transform scaleBy:720/1920.0];
     [filter setValue:transform forKey:@"inputTransform"];
     self.livePreview2.filters = @[filter];
-    
+    */
 
     [self.livePreview3 bind:@"ciImage" toObject:[self.blackMagicController.items objectAtIndex:2] withKeyPath:@"inputImage" options:nil];
-    self.livePreview3.delegate = self.liveMixer;
-    self.livePreview3.customData = @(3);
-    [self.livePreview3 bind:@"highlight" toObject:self.liveMixer withKeyPath:@"input3Selected" options:nil];
-    [self.livePreview3 bind:@"recordHighlight" toObject:self.videoBankRecorder withKeyPath:@"device3Selected" options:nil];
 
     
     
     [self.window orderFront:self];
     
-       
+    
+    self.mavController = [[MavController alloc] init];
+
+    self.decklink1input = -1;
+    self.decklink2input = -1;
+    self.decklink3input = -1;
+    [self.mavController.outputPatch[0] bind:@"input" toObject:self withKeyPath:@"decklink1input" options:nil];
+    [self.mavController.outputPatch[1] bind:@"input" toObject:self withKeyPath:@"decklink2input" options:nil];
+    [self.mavController.outputPatch[2] bind:@"input" toObject:self withKeyPath:@"decklink3input" options:nil];
+    
+    //    [self addObserver:self forKeyPath:@"decklink1input" options:0 context:nil];
+    for(int i=0;i<3;i++){
+        [self.mavController.outputPatch[i] addObserver:self forKeyPath:@"input" options:0 context:(void*)@(i)];
+    }
+    
+    [self.mavController readAllOutputs];
+
     
     
 }
@@ -102,6 +131,42 @@
     [BeamSync enable];
 }
 
+-(void)setOutSelector:(int)outSelector{
+    [self willChangeValueForKey:@"out1selected"];
+    [self willChangeValueForKey:@"out2selected"];
+    [self willChangeValueForKey:@"out3selected"];
+    
+    _outSelector = outSelector;
+    
+    [self didChangeValueForKey:@"out1selected"];
+    [self didChangeValueForKey:@"out2selected"];
+    [self didChangeValueForKey:@"out3selected"];
+    
+}
+
+-(int)outSelector{
+    return _outSelector;
+}
+
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    
+    if([keyPath isEqualToString:@"input"]){
+        NSNumber * output = (__bridge NSNumber*) context;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if([output intValue] == 0){
+                self.decklink1input = [[object valueForKey:@"input"] intValue];               
+            }
+            if([output intValue] == 1){
+                self.decklink2input = [[object valueForKey:@"input"] intValue];               
+            }
+            if([output intValue] == 2){
+                self.decklink3input = [[object valueForKey:@"input"] intValue];               
+            }
+        });
+    }
+}
 
 /*
  -(IBAction)readPasteboard:(id)sender{

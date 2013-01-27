@@ -21,7 +21,7 @@
         waitingForData = NO;
         readThreadRunning = FALSE;
         incommingString = [NSMutableString string];
-        NSString * serialPort = @"/dev/tty.usbserial-FT5CHUS4B";
+        NSString * serialPort = @"/dev/tty.usbserial";
         
         
         /*    NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:@"/dev/"];
@@ -248,7 +248,7 @@
     
     if(serialFileDescriptor == -1){
         // ofLog(OF_LOG_ERROR,"ofSerial: unable to open port %s", portName.c_str());
-        errorMessage = @"XBee not found";
+        errorMessage = @"Serialport not found";
         return errorMessage;
     }
     

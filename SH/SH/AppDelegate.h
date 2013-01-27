@@ -24,7 +24,12 @@
 
 #import "BlackMagicController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+#import "MAVController.h"
+
+@interface AppDelegate : NSObject <NSApplicationDelegate>{
+    int _outSelector;
+
+}
 
 @property (assign) IBOutlet NSWindow *window;
 
@@ -32,12 +37,24 @@
 @property VideoBankPlayer * videoBankPlayer;
 @property VideoBankSimPlayer * videoBankSimPlayer;
 @property VideoBankRecorder * videoBankRecorder;
-@property LiveMixer * liveMixer;
+
+@property LiveMixer * liveMixer1;
+@property LiveMixer * liveMixer2;
+@property LiveMixer * liveMixer3;
+
 @property Filters * filters;
 @property Masking * masking;
 @property BlackMagicController * blackMagicController;
 @property QLabController * qlab;
 @property MIDIReceiver * midiReceiver;
+@property (weak) IBOutlet NSSegmentedControl *moviePlayerSegmentControl;
+
+@property MavController * mavController;
+@property (readwrite) int outSelector;
+@property (readwrite) int decklink1input;
+@property (readwrite) int decklink2input;
+@property (readwrite) int decklink3input;
+
 
 @property (weak) IBOutlet OutputWindow * outputWindow;
 
