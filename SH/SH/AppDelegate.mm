@@ -124,7 +124,7 @@
 
     [globalMidi addBindingTo:self path:@"decklink1input" channel:1 number:60 rangeMin:0 rangeLength:127];
     [globalMidi addBindingTo:self path:@"decklink2input" channel:1 number:61 rangeMin:0 rangeLength:127];
-    [globalMidi addBindingTo:self path:@"decklink2input" channel:1 number:62 rangeMin:0 rangeLength:127];
+    [globalMidi addBindingTo:self path:@"decklink3input" channel:1 number:62 rangeMin:0 rangeLength:127];
     
 }
 
@@ -221,7 +221,7 @@
     @{QName : [NSString stringWithFormat:@"Input 2: %i", self.decklink2input+1], QPath: @"decklink2input"},
     ];
     
-    NSString * title = [NSString stringWithFormat:@"Input 1: %i",self.decklink2input+1];
+    NSString * title = [NSString stringWithFormat:@"Input 2: %i",self.decklink2input+1];
     
     [QLabController createCues:cues groupTitle:title sender:self];
 }
@@ -230,7 +230,7 @@
     @{QName : [NSString stringWithFormat:@"Input 3: %i", self.decklink3input+1], QPath: @"decklink3input"},
     ];
     
-    NSString * title = [NSString stringWithFormat:@"Input 1: %i",self.decklink3input+1];
+    NSString * title = [NSString stringWithFormat:@"Input 3: %i",self.decklink3input+1];
     
     [QLabController createCues:cues groupTitle:title sender:self];
 }
