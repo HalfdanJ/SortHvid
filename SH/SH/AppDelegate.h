@@ -26,6 +26,8 @@
 
 #import "MAVController.h"
 
+extern MIDIReceiver * globalMidi;
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>{
     int _outSelector;
 

@@ -47,7 +47,7 @@
 
     for(int i=0;i<3;i++){
         LiveMixer * mixer;
-        mixer = [[LiveMixer alloc] init];
+        mixer = [[LiveMixer alloc] initWithNum:i];
         [mixer bind:@"input1" toObject:[self.blackMagicController.items objectAtIndex:0] withKeyPath:@"inputImage" options:0];
         [mixer bind:@"input2" toObject:[self.blackMagicController.items objectAtIndex:1] withKeyPath:@"inputImage" options:0];
         [mixer bind:@"input3" toObject:[self.blackMagicController.items objectAtIndex:2] withKeyPath:@"inputImage" options:0];
@@ -122,7 +122,9 @@
     
     [self.mavController readAllOutputs];
 
-    
+    [globalMidi addBindingTo:self path:@"decklink1input" channel:1 number:60 rangeMin:0 rangeLength:127];
+    [globalMidi addBindingTo:self path:@"decklink2input" channel:1 number:61 rangeMin:0 rangeLength:127];
+    [globalMidi addBindingTo:self path:@"decklink2input" channel:1 number:62 rangeMin:0 rangeLength:127];
     
 }
 
@@ -205,7 +207,33 @@
  
  }
  */
-
+-(void)qlabMatrix1{
+    NSArray * cues = @[
+    @{QName : [NSString stringWithFormat:@"Input 1: %i", self.decklink1input+1], QPath: @"decklink1input"},
+    ];
+    
+    NSString * title = [NSString stringWithFormat:@"Input 1: %i",self.decklink1input+1];
+    
+    [QLabController createCues:cues groupTitle:title sender:self];
+}
+-(void)qlabMatrix2{
+    NSArray * cues = @[
+    @{QName : [NSString stringWithFormat:@"Input 2: %i", self.decklink2input+1], QPath: @"decklink2input"},
+    ];
+    
+    NSString * title = [NSString stringWithFormat:@"Input 1: %i",self.decklink2input+1];
+    
+    [QLabController createCues:cues groupTitle:title sender:self];
+}
+-(void)qlabMatrix3{
+    NSArray * cues = @[
+    @{QName : [NSString stringWithFormat:@"Input 3: %i", self.decklink3input+1], QPath: @"decklink3input"},
+    ];
+    
+    NSString * title = [NSString stringWithFormat:@"Input 1: %i",self.decklink3input+1];
+    
+    [QLabController createCues:cues groupTitle:title sender:self];
+}
 
 
 @end
