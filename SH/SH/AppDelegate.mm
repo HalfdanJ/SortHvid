@@ -26,7 +26,7 @@
     
 
     
-    self.videoBank = [[VideoBank alloc] initWithNumberBanks:50];
+    self.videoBank = [[VideoBank alloc] initWithNumberBanks:300];
     self.videoBank.videoPreviewView = self.previewView;
     
     ////------
@@ -75,11 +75,13 @@
     [self.livePreview2 bind:@"highlight" toObject:self.liveMixer withKeyPath:@"input2Selected" options:nil];
     [self.livePreview2 bind:@"recordHighlight" toObject:self.videoBankRecorder withKeyPath:@"device2Selected" options:nil];
     
+    
+    /*
     CIFilter * filter = [CIFilter filterWithName:@"CIAffineTransform"];
     NSAffineTransform * transform = [NSAffineTransform transform];
     [transform scaleBy:720/1920.0];
     [filter setValue:transform forKey:@"inputTransform"];
-    self.livePreview2.filters = @[filter];
+    self.livePreview2.filters = @[filter];*/
     
 
     [self.livePreview3 bind:@"ciImage" toObject:[self.blackMagicController.items objectAtIndex:2] withKeyPath:@"inputImage" options:nil];

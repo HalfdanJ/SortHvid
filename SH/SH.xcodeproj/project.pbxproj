@@ -467,6 +467,7 @@
 				GCC_PREFIX_HEADER = "SH/SH-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../VideoSuiteUtilities/libs/Blackmagic DeckLink SDK 9.6.4/Mac/include\"",
+					"\"$(SRCROOT)/../VideoSuiteUtilities/pymidi-master\"",
 				);
 				INFOPLIST_FILE = "SH/SH-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -482,6 +483,7 @@
 				GCC_PREFIX_HEADER = "SH/SH-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../VideoSuiteUtilities/libs/Blackmagic DeckLink SDK 9.6.4/Mac/include\"",
+					"\"$(SRCROOT)/../VideoSuiteUtilities/pymidi-master\"",
 				);
 				INFOPLIST_FILE = "SH/SH-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
